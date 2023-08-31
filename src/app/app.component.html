@@ -2,13 +2,13 @@
         (click)="increase()">+1</button>
 
 <button class="fz-50 p-50 m-20"
-        [disabled]="cannotDecrease"
+        [disabled]="cannotDecrease$ | async"
         (click)="decrease()">-1</button>
 
 <button class="fz-50 p-50 m-20"
-        [disabled]="cannotDecrease"
+        [disabled]="cannotDecrease$ | async"
         (click)="clear()">=1</button>
 
-<p class="fz-60">Counter = {{counter}}</p>
+<p class="fz-60">Counter = {{count$ | async}}</p>
 
 <p *ngIf="updatedAt" class="fz-60">Updated {{updatedAt | date: 'HH:mm:ss dd/MM/yyyy'}}</p>
