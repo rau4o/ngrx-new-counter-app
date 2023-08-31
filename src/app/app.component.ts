@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngrx-new-counter-app';
+
+  public counter = 0;
+  public updatedAt?: number;
+
+  get cannotDecrease(): boolean {
+    return this.counter <= 0;
+  }
+
+  increase(): void {
+    this.updatedAt = Date.now();
+    this.counter++;
+  }
+
+  decrease(): void {
+    this.updatedAt = Date.now();
+    this.counter--;
+  }
+
+  clear(): void {
+    this.updatedAt = Date.now();
+    this.counter = 0;
+  }
 }
