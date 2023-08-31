@@ -6,7 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import {metaReducers, reducers} from "./reducers";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import {AppEffects} from "./app.effects";
+import {AppEffects} from "./reducers/counter.effects";
 
 @NgModule({
   declarations: [

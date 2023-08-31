@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {changeUpdatedAt, clear, decrease, increase} from "./reducers/counter";
 import {map} from "rxjs";
+import {changeUpdatedAt, clear, decrease, increase} from "./counter.actions";
 
 @Injectable()
 
